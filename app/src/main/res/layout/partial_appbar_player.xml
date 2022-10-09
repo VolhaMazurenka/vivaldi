@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:elevation="0dp"
+    app:elevation="0dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarStylePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/transparent"
+        android:elevation="0dp"
+        app:menu="@menu/top_appbar_track"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="@color/color_white_primary"
+        app:title="@string/track_now_playing"
+        app:titleTextColor="@color/color_white_primary" />
+
+</com.google.android.material.appbar.AppBarLayout>

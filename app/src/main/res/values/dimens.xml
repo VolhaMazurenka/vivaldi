@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spacing.small_extra">4dp</dimen>
+    <dimen name="spacing.small">8dp</dimen>
+    <dimen name="spacing.normal">16dp</dimen>
+    <dimen name="spacing.large">24dp</dimen>
+    <dimen name="spacing.double">32dp</dimen>
+    <dimen name="spacing.large_extra">64dp</dimen>
+    <dimen name="spacing.slider">12dp</dimen>
+
+    <dimen name="text_size.track_header">16sp</dimen>
+    <dimen name="text_size.track_normal">14sp</dimen>
+    <dimen name="text_size.track_small">12sp</dimen>
+
+    <dimen name="size.empty">0dp</dimen>
+    <dimen name="size.slider_halo_radius">16dp</dimen>
+
+</resources>

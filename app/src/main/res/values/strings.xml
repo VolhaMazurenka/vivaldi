@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">vivaldi</string>
+    <string name="app_name">Player</string>
+
+    <string name="track_menu_more">more</string>
+
+    <string name="track_position_in_list">%1$d in %2$d</string>
+    <string name="track_now_playing">Now Playing</string>
+    <string name="track_time">%1$d:%2$d</string>
 </resources>

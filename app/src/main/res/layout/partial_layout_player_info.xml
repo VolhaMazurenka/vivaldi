@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/black">
+
+    <TextView
+        android:id="@+id/textview_player_title"
+        style="@style/TextViewTrackTextAppearanceTitleStylePrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing.slider"
+        android:ellipsize="end"
+        android:gravity="center_vertical|start"
+        android:textSize="@dimen/text_size.track_header"
+        app:layout_constraintEnd_toStartOf="@id/imageview_player_is_favourite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/track_position_in_list" />
+
+    <TextView
+        android:id="@+id/textview_player_author"
+        style="@style/TextViewTrackTextAppearanceStylePrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing.small"
+        android:ellipsize="end"
+        android:gravity="center_vertical|start"
+        android:textSize="@dimen/text_size.track_normal"
+        app:layout_constraintEnd_toEndOf="@id/textview_player_title"
+        app:layout_constraintStart_toStartOf="@id/textview_player_title"
+        app:layout_constraintTop_toBottomOf="@id/textview_player_title"
+        tools:text="@string/track_position_in_list" />
+
+    <ImageView
+        android:id="@+id/imageview_player_is_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing.double"
+        android:layout_marginEnd="@dimen/spacing.small_extra"
+        android:contentDescription="@null"
+        android:padding="@dimen/spacing.small"
+        android:src="@drawable/ic_heart_outlined"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_player_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textview_player_title"
+        app:layout_constraintTop_toTopOf="@id/textview_player_title" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing.small"
+        app:haloColor="@color/color_player_slider_inactive_color_primary"
+        app:haloRadius="@dimen/size.slider_halo_radius"
+        app:labelBehavior="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_player_author"
+        app:thumbColor="@color/color_white_primary"
+        app:thumbRadius="8dp"
+        app:trackColorActive="@color/color_white_primary"
+        app:trackColorInactive="@color/color_player_slider_inactive_color_primary" />
+
+    <TextView
+        android:id="@+id/textview_player_time_played"
+        style="@style/TextViewTrackTextAppearanceStylePrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing.slider"
+        android:textSize="@dimen/text_size.track_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider_player"
+        tools:text="@string/track_time" />
+
+    <TextView
+        android:id="@+id/textview_player_time_left"
+        style="@style/TextViewTrackTextAppearanceStylePrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:textSize="@dimen/text_size.track_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider_player"
+        tools:text="@string/track_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

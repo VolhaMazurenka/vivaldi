@@ -3,8 +3,26 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="teal_200">#FF80CBC4</color>
+    <color name="cyan_700">#FF0097A7</color>
+    <color name="teal_700">#FF00796B</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="color_statusbar_primary">#00000000</color>
+    <color name="color_appbar_primary">#00000000</color>
+
+    <color name="color_orange_dark">#FFA83C2C</color>
+    <color name="color_orange_light">#FFC96E55</color>
+
+    <color name="color_white_primary">#FFECEFED</color>
+    <color name="color_white_alpha_50_primary">#80ECEFED</color>
+
+    <!-- Player -->
+    <color name="color_player_slider_inactive_color_primary">#36ECEFED</color>
+    <color name="color_player_slider_halo">#16ECEFED</color>
+
+    <color name="color_player_imageview_player_background_inner">#16ECEFED</color>
+    <color name="color_player_imageview_player_background_outer">#36ECEFED</color>
 </resources>

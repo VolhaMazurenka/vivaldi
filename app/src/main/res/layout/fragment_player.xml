@@ -2,19 +2,86 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragment.BaseFragment">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MainFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageview_player_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/appbar_player"
+        layout="@layout/partial_appbar_player"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_player_list_position"
+        style="@style/TextViewTrackTextAppearanceStylePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing.large_extra"
+        android:layout_marginBottom="@dimen/spacing.small_extra"
+        android:textSize="@dimen/text_size.track_small"
+        app:layout_constraintBottom_toTopOf="@id/cardview_player_cover"
+        tools:text="@string/track_position_in_list" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_player_cover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size.empty"
+        android:layout_marginHorizontal="@dimen/spacing.large_extra"
+        android:layout_marginTop="@dimen/spacing.large_extra"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_player">
+
+        <ImageView
+            android:id="@+id/imageview_player_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/layout_player_info"
+        layout="@layout/partial_layout_player_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing.large"
+        android:layout_marginTop="@dimen/spacing.double"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview_player_cover" />
+
+    <include
+        android:id="@+id/layout_player_control_view"
+        layout="@layout/partial_layout_player_control_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing.large_extra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="@id/cardview_player_cover"
+        app:layout_constraintEnd_toEndOf="@id/cardview_player_cover"
+        app:layout_constraintStart_toStartOf="@id/cardview_player_cover"
+        app:layout_constraintTop_toTopOf="@id/cardview_player_cover" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
