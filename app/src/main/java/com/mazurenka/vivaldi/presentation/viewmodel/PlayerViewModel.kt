@@ -1,3 +1,5 @@
 package com.mazurenka.vivaldi.presentation.viewmodel
 
-class PlayerViewModel : BaseViewModel()
+import com.mazurenka.vivaldi.data.repository.AudioRepository
+
+class PlayerViewModel(private val audioRepository: AudioRepository) : BaseViewModel()
