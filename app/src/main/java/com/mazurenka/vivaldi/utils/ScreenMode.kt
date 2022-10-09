@@ -9,7 +9,7 @@ import androidx.core.view.updateLayoutParams
 import androidx.core.view.updateMargins
 
 
-internal fun makeFullScreen(activity: Activity, view: View) {
+internal fun makeFullScreen(activity: Activity) {
     val decorView = activity.window.decorView
     @Suppress("DEPRECATION")
     when {
