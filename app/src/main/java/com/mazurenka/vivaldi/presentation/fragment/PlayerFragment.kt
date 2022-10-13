@@ -47,7 +47,7 @@ class PlayerFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getAudioList(requireContext())
+        viewModel.getAudioList()
     }
 
     override fun onCreateView(
